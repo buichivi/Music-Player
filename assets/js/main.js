@@ -298,6 +298,7 @@ const app = {
                 audio.volume = _this.currentVolume;
                 _this.loadActiveSong();
                 _this.scrollToActiveSong();
+                _this.setConfig('currentIndex', _this.currentIndex);
             })
         });
 
@@ -314,6 +315,7 @@ const app = {
                 audio.volume = _this.currentVolume;
                 _this.loadActiveSong();
                 _this.scrollToActiveSong();
+                _this.setConfig('currentIndex', _this.currentIndex);
             })
         });
 
@@ -361,6 +363,7 @@ const app = {
         this.isRandom = (this.config.isRandom == undefined) ? this.isRandom : this.config.isRandom;
         this.isRepeat = (this.config.isRepeat == undefined) ? this.isRepeat : this.config.isRepeat;
         this.currentVolume = (this.config.currentVolume == undefined) ? this.currentVolume : this.config.currentVolume;
+        this.currentIndex = (this.config.currentIndex == undefined) ? this.currentIndex : this.config.currentIndex;
     },
     scrollToActiveSong: function() {
         setTimeout(function() {
