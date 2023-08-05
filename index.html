@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-6-pro-main/css/all.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="player">
+        <div class="player-overlay"></div>
+
+        <!-- Dashboard -->
+        <input type="checkbox" hidden class="hide-dashboard" name="" id="hide-dashboard">
+        <div class="dashboard">
+            <!-- Header -->
+            <header>
+                <label for="hide-dashboard" class="btn minimize-btn">
+                    <i class="fa-regular fa-chevron-down"></i>
+                </label>
+                <h3>Now playing</h3>
+                <div class="volume">
+                    <div class="volume--icon-wrap">
+                        <div class="volume--icon volume--hide volume__off">
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </div>
+                        <div class="volume--icon volume--hide volume__low">
+                            <i class="fa-solid fa-volume-off"></i>
+                        </div>
+                        <div class="volume--icon volume__medium">
+                            <i class="fa-solid fa-volume-low"></i>
+                        </div>
+                        <div class="volume--icon volume--hide volume__medium-2">
+                            <i class="fa-solid fa-volume"></i>
+                        </div>
+                        <div class="volume--icon volume--hide volume__high">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                    </div>
+                    <div class="volume__range">
+                        <div class="volume__bar"><div class="volume__fill"></div></div>
+                        <input type="range" name="" id="volume" min="0" max="100" value="30" step="1">
+                    </div>
+                </div>
+            </header>
+            <!-- thumb -->
+            <div class="thumb">
+                <img class="thumb__img" src="./assets/img/Dusk_Till_Dawn_Zayn_Malik.jpg" alt="">
+            </div>
+            <!-- Current Song -->
+            <div class="current-song">
+                <h3 class="current-song__name">Dusk Till Dawn</h3>
+                <h5 class="current-song__artist">Zayn ft. Sia</h5>
+            </div>
+            <!-- Progress -->
+            <div class="progress">
+                <div class="bar"><div class="fill"></div></div>
+                <input type="range" class="progress-song" id="progress" value="0" step="1" min="0" max="100">
+            </div>
+
+            <!-- Time -->
+            <div class="time">
+                <span class="time-current">-:--</span>
+                <span class="time-total">-:--</span>
+            </div>
+            <audio src="" id="audio"></audio>
+            
+            <!-- Control -->
+            <div class="control">
+                <div class="btn shuffle-btn">
+                    <i class="icon-shuffle fa-solid fa-shuffle"></i>
+                </div>
+                <div class="btn prev-btn">
+                    <i class="icon-prev fa-solid fa-backward-step"></i>
+                </div>
+                <div class="btn toggle-play-btn">
+                    <i class="icon-play fa-solid fa-play"></i>
+                    <i class="icon-pause fa-solid fa-pause"></i>
+                </div>
+                <div class="btn next-btn">
+                    <i class="icon-next fa-solid fa-forward-step"></i>
+                </div>
+                <div class="btn repeat-btn">
+                    <i class="icon-repeat fa-solid fa-repeat"></i>
+                    <i class="icon-repeat-1 fa-solid fa-repeat-1"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Minimize song -->
+        <label class="minimize" for="hide-dashboard">
+            <div class="minimize-wrap">
+                <img class="minimize__img" src="./assets/img/Dusk_Till_Dawn_Zayn_Malik.jpg" alt="">
+                <div class="minimize__info">
+                    <h4>Dusk Till Dawn</h4>
+                    <h5>Zayn, Sia</h5>
+                </div>
+            </div>
+            <div class="minimize__control">
+                <div class="btn prev-btn prev-btn-minimize">
+                    <i class="icon-prev fa-solid fa-backward-step"></i>
+                </div>
+                <div class="btn toggle-play-btn toggle-play-btn-minimize">
+                    <i class="icon-play fa-solid fa-play "></i>
+                    <i class="icon-pause fa-solid fa-pause"></i>
+                </div>
+                <div class="btn next-btn next-btn-minimize">
+                    <i class="icon-next fa-solid fa-forward-step"></i>
+                </div>
+            </div>
+            <div class="minimize__timer"></div>
+        </label>
+
+        <!-- List song -->
+        <div class="playlist">
+            <h1 class="playlist__heading">
+                <i class="fa-thin fa-list-music"></i>
+                Playlist
+            </h1>
+            <ul class="playlist__list">    
+            </ul>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
