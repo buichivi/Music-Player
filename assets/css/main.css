@@ -83,7 +83,7 @@ header > h3 {
     opacity: 1;
     background-color: transparent;
     overflow: hidden;
-    transition: top linear 0.3s, opacity linear 0.4s;
+    transition: top linear 0.2s, opacity linear 0.4s;
     backdrop-filter: blur(30px);
 }
 .dashboard.dashboard--hide {
